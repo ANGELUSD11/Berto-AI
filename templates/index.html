@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chatbot Berto</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Press+Start+2P&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+</head>
+  <body>
+    <div class="chat-container">
+      <h1 style="text-align: center;">🌱 Berto AI</h1>
+      <div id="chat" class="chat-box"></div>
+      <div class="input-area">
+        <input type="text" id="userInput" placeholder="Escribe tu mensaje...">
+        <input type="file" id="imageInput" accept="image/*" style="display: none;">
+
+        <button id="uploadBtn" type="button" title="Subir imagen">
+          <i class="bi bi-image"></i>
+        </button>
+
+        <button onclick="enviar()">Enviar</button>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      const input = document.getElementById('userInput');
+      const imageInput = document.getElementById('imageInput');
+      const chat = document.getElementById('chat');
+
+      input.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          enviar();
+        }
+      });
+
+      async function enviar() {
+        const mensaje = input.value.trim();
+        const archivo = imageInput.files[0];
+
+        if (!mensaje && !archivo) {
+          chat.innerHTML += `<p><strong>⚠️ Error:</strong> Debes escribir algo o subir una imagen.</p>`;
+          return;
+        }
+
+        if (mensaje) {
+          chat.innerHTML += `<p><strong>Tú:</strong> ${mensaje}</p>`;
+        }
+        if (archivo) {
+          const reader = new FileReader();
+          reader.onload = function(e) {
+            const imgSrc = e.target.result;
+            chat.innerHTML += `
+              <div class="mensaje user">
+                <img src="${imgSrc}" alt="Imagen subida" style="max-width: 100%; border-radius: 8px; margin-top: 5px;">
+              </div>
+            `;
+            chat.scrollTop = chat.scrollHeight;
+          };
+          reader.readAsDataURL(archivo);
+        }
+
+        input.value = '';
+        imageInput.value = '';
+
+        const formData = new FormData();
+        formData.append('message', mensaje);
+        if (archivo) {
+          formData.append('image', archivo);
+        }
+
+        try {
+          const res = await fetch('/chat', {
+            method: 'POST',
+            body: formData,
+          });
+
+          const contentType = res.headers.get('content-type') || '';
+          if (!res.ok) {
+            throw new Error(`Error del servidor (${res.status})`);
+          }
+          if (!contentType.includes('application/json')) {
+            throw new Error('La respuesta no es JSON válida.');
+          }
+
+          const data = await res.json();
+          chat.innerHTML += `<p><strong>Berto:</strong></p>` + marked.parse(data.reply);
+          chat.scrollTop = chat.scrollHeight;
+        } catch (error) {
+          chat.innerHTML += `<p><strong>❌ Error:</strong> ${error.message}</p>`;
+          chat.scrollTop = chat.scrollHeight;
+        }
+      }
+      document.getElementById('uploadBtn').addEventListener('click', () => {
+        document.getElementById('imageInput').click();
+      });
+
+      const chatContainer = document.querySelector('.chat-container');
+
+      const resizeObserver = new ResizeObserver(entries => {
+        for (let entry of entries) {
+          const el = entry.target;
+          const newWidth = entry.contentRect.width;
+
+          el.style.transition = 'none'; 
+          const oldWidth = el.offsetWidth + 'px';
+
+          el.style.width = oldWidth;
+
+          el.offsetHeight;
+
+          el.style.transition = 'width 0.4s ease';
+          el.style.width = newWidth + 'px';
+        }
+      });
+
+      resizeObserver.observe(chatContainer);
+    </script>
+  </body>
+</html>
