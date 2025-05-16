@@ -106,11 +106,11 @@ button:hover {
 
     #userInput {
         font-size: 1em;
-        padding: 8px;
+        padding: 5px;
     }
 
     button {
-        padding: 8px 12px;
+        padding: 8px 6px;
         font-size: 0.9em;
     }
 
