@@ -12,11 +12,12 @@ Berto AI🌱 es un chatbot inteligente parte del proyecto [AgroSync](https://git
 ---
 
 ## Tecnologías y librerías usadas⌨️  
-- asyncio(módulo por defecto de Python para manejar concurrencia y asincronismo)
 - [Python3.12.9🐍](https://www.python.org/)
-- [python-dotenv](https://pypi.org/project/python-dotenv/)(librería para cargar variables de entorno)
-- [requests](https://pypi.org/project/requests/)(librería para el manejo de solicitudes HTTP)
-- [PyNaCl](https://pypi.org/project/PyNaCl/)(implementación de la librería NaCl para encriptación de datos)
-- [pillow](https://pypi.org/project/pillow/)(librería para el procesamiento de imágenes)
-- [google-api-python-client](https://pypi.org/project/google-api-python-client/)(API de Google)
-- [google-generativeai](https://pypi.org/project/google-generativeai/)(SDK oficial de Google para interactuar con sus LLMs por medio de su API)
+- asyncio: módulo por defecto de Python para manejar concurrencia y asincronismo
+- jsonify: módulo para trabajar con envío de datos por medio de JSON
+- [python-dotenv](https://pypi.org/project/python-dotenv/): librería para cargar variables de entorno
+- [requests](https://pypi.org/project/requests/): librería para el manejo de solicitudes HTTP
+- [PyNaCl](https://pypi.org/project/PyNaCl/): implementación de la librería NaCl para encriptación de datos
+- [pillow](https://pypi.org/project/pillow/): librería para el procesamiento de imágenes
+- [google-api-python-client](https://pypi.org/project/google-api-python-client/): API de Google
+- [google-generativeai](https://pypi.org/project/google-generativeai/): SDK oficial de Google para interactuar con sus LLMs por medio de su API
