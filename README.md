@@ -15,7 +15,7 @@ Berto AI🌱 es un chatbot inteligente parte del proyecto [AgroSync](https://git
 - [Python3.12.9🐍](https://www.python.org/)
 - asyncio: módulo por defecto de Python para manejar concurrencia y asincronismo
 - jsonify: módulo para trabajar con envío de datos por medio de JSON
-- [python-dotenv](https://pypi.org/project/python-dotenv/): librería para cargar variables de entorno
+- [python-dotenv](https://pypi.org/project/python-dotenv/): librería para manejo de variables de entorno
 - [requests](https://pypi.org/project/requests/): librería para el manejo de solicitudes HTTP
 - [PyNaCl](https://pypi.org/project/PyNaCl/): implementación de la librería NaCl para encriptación de datos
 - [pillow](https://pypi.org/project/pillow/): librería para el procesamiento de imágenes
