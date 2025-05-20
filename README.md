@@ -33,5 +33,19 @@ Berto AI🌱 es un chatbot inteligente parte del proyecto [AgroSync](https://git
 
 ## EN🇬🇧 
 ### What is it🤔?  
-Berto AI🌱 is a smart chatbot and part of the [AgroSync](https://github.com/hectop4/AgroSync/) project developed by the DeepThinkers team for the TalentoTech 2025 hackathon organized by the Ministry of ICT of Colombia. The purpose of this project is to provide a digital solution for Colombian farmers, allowing them to manage their crops more easily and, thanks to Berto, have an intelligent assistant available whenever they need to consult any kind of information related to agriculture.
+Berto AI🌱 is a smart chatbot and part of the [AgroSync](https://github.com/hectop4/AgroSync/) project developed by the DeepThinkers team for the TalentoTech 2025 hackathon organized by the Ministry of ICT of Colombia. The purpose of this project is to provide a digital solution for Colombian farmers, allowing them to manage their crops more easily and, thanks to Berto, have an intelligent assistant available whenever they need to consult any kind of information related to agriculture.  
 
+---
+
+## Technologies and Libraries Used⌨️  
+- [Python3.12.9🐍](https://www.python.org/)
+- [Flask 3.1.1](https://flask.palletsprojects.com/en/stable/): a lightweight Python web framework for building web applications
+- [gunicorn](https://pypi.org/project/gunicorn/): a scalable HTTP web server for Python web apps, ideal for production environments
+- asyncio: Python’s built-in module for handling concurrency and asynchronous programming
+- jsonify: a utility for working with JSON data in Flask
+- [python-dotenv](https://pypi.org/project/python-dotenv/): a library for managing environment variables from .env files
+- [requests](https://pypi.org/project/requests/): a library for making HTTP requests in Python
+- [PyNaCl](https://pypi.org/project/PyNaCl/): a Python binding to the Networking and Cryptography (NaCl) library for data encryption
+- [pillow](https://pypi.org/project/pillow/): a Python Imaging Library (PIL) fork used for image processing
+- [google-api-python-client](https://pypi.org/project/google-api-python-client/): Google’s official API client for accessing Google services
+- [google-generativeai](https://pypi.org/project/google-generativeai/): Google’s official SDK for interacting with their LLMs via API
