@@ -3,11 +3,24 @@ html {
     overflow-x: hidden;
 }
 
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 body {
-    background: linear-gradient(135deg, #e0f7fa, #006730);
+    background: linear-gradient(135deg, #e0f7fa, #006730, #80cbc4);
+    background-size: 300% 300%;
+    animation: gradientBackground 12s ease infinite;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
     margin: 0;
     padding: 0;
     display: flex;
@@ -19,7 +32,6 @@ body {
 }
 
 .chat-box, .chat-box p {
-  word-break: break-word;
   overflow-wrap: break-word;
 }
 
