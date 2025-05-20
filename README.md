@@ -19,6 +19,7 @@ Berto AI🌱 es un chatbot inteligente parte del proyecto [AgroSync](https://git
 ## Tecnologías y librerías usadas⌨️  
 - [Python3.12.9🐍](https://www.python.org/)
 - [Flask 3.1.1](https://flask.palletsprojects.com/en/stable/): micro framework de Python para desarrollo de aplicaciones web
+- [gunicorn](https://pypi.org/project/gunicorn/): servidor web HTTP para applicaciones web en Python, escalable e ideal para entornos de producción
 - asyncio: módulo por defecto de Python para manejar concurrencia y asincronismo
 - jsonify: módulo para trabajar con envío de datos por medio de JSON
 - [python-dotenv](https://pypi.org/project/python-dotenv/): librería para manejo de variables de entorno
