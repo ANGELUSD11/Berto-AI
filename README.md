@@ -27,3 +27,10 @@ Berto AI🌱 es un chatbot inteligente parte del proyecto [AgroSync](https://git
 - [pillow](https://pypi.org/project/pillow/): librería para el procesamiento de imágenes
 - [google-api-python-client](https://pypi.org/project/google-api-python-client/): API de Google
 - [google-generativeai](https://pypi.org/project/google-generativeai/): SDK oficial de Google para interactuar con sus LLMs por medio de su API
+
+---
+
+## EN🇬🇧 
+### What is it🤔?  
+Berto AI🌱 is a smart chatbot and part of the [AgroSync](https://github.com/hectop4/AgroSync/) project developed by the DeepThinkers team for the TalentoTech 2025 hackathon organized by the Ministry of ICT of Colombia. The purpose of this project is to provide a digital solution for Colombian farmers, allowing them to manage their crops more easily and, thanks to Berto, have an intelligent assistant available whenever they need to consult any kind of information related to agriculture.
+
