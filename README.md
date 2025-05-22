@@ -1,5 +1,5 @@
 ## **🌱Berto AI ChatBot**  
-Made with Python and Flask, powered with Google Gémini 2.5 flash🤖  
+Made with Python and Flask, powered with Google Gemini 2.5 flash🤖  
 
 ---
 
