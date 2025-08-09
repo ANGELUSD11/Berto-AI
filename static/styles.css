@@ -87,6 +87,21 @@ button:hover {
     background-color: #08d2b0;
 }
 
+.github-button {
+    background-color: #00796b;
+    color: white;
+    border: none;
+    padding: 4px 5px;
+    font-size: 1em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.github-button:hover {
+    background-color: #08d2b0;
+}
+
 .mensaje {
     margin-bottom: 12px;
     padding: 8px 12px;
