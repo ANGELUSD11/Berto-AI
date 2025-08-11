@@ -49,3 +49,4 @@ Berto AI🌱 is a smart chatbot and part of the [AgroSync](https://github.com/he
 - [pillow](https://pypi.org/project/pillow/): a Python Imaging Library (PIL) fork used for image processing
 - [google-api-python-client](https://pypi.org/project/google-api-python-client/): Google’s official API client for accessing Google services
 - [google-generativeai](https://pypi.org/project/google-generativeai/): Google’s official SDK for interacting with their LLMs via API
+- [Render](https://render.com/): Deploy service compatible with Flask projects
